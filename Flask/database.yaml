@@ -1,0 +1,1 @@
+uri: 'mongodb://flask_user:flask_pass@localhost:27017/flask_app'

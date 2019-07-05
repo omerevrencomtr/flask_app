@@ -1,0 +1,35 @@
+Terminali açýn mongo komut satýrýný baþlatýn:
+$ cd C:\Program Files\MongoDB\Server\4.0\bin
+$ mongo
+
+Satýrlarý yapýþtýrýn
+> 
+use flask_app
+db.createUser({user:'flask_users', pwd:'flask_pass', roles:['readWrite', 'dbAdmin']})
+db.createCollection('users')
+exit
+<
+
+./Flask dizinine geçin ve uygulamayý baþlatýn
+& python app.py
+
+Gerekli paketler eksik ise
+& pip install -r requirements.txt
+komutu ile yükleyin.
+
+Angular7 application ý baþlatmak için
+./Angular7 dizini altýnda
+$ npm install
+$ ng build
+yapýn varsayýlan olarak ./Flask/public klasörüne build edecektir.
+build almadan görmek için
+$ ng serve
+yapýn. 
+
+Angular 1 versiyonunu görmek için
+$ python angular1.py
+
+
+Postman Collection;
+https://documenter.getpostman.com/view/7822614/SVSBxYaB?version=latest
+./Postman

@@ -1,0 +1,15 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+  <div class="form-group">
+    <label>Ad</label>
+    <input name="first_name" #first_name="ngModel" [(ngModel)]="service.formData.first_name" class="form-control" required>
+    <div class="validation-error" *ngIf="first_name.invalid && first_name.touched">Alan Gereklidir.</div>
+  </div>
+  <div class="form-group">
+    <label>Soyad</label>
+    <input name="last_name" #last_name="ngModel" [(ngModel)]="service.formData.last_name" class="form-control">
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Kayıt et</button>
+  </div>
+</form>
